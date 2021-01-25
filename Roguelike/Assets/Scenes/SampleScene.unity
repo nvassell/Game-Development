@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 276921237}
   - component: {fileID: 276921241}
   - component: {fileID: 276921242}
+  - component: {fileID: 276921243}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -227,7 +228,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 5ebdb24704e0235408e0b3fcd7caf799, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -268,6 +269,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 276921238}
   animator: {fileID: 276921242}
+  player: {fileID: 0}
 --- !u!95 &276921242
 Animator:
   serializedVersion: 3
@@ -287,6 +289,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &276921243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276921236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d95ff19e09d3ed46b94f56024e4327f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 276921242}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +313,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -313,6 +329,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813ed6814cdd69c489ae927f7814e673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 276921240}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -323,7 +352,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.2891153, g: 0.49466243, b: 0.6886792, a: 0}
+  m_BackGroundColor: {r: 0.49545702, g: 1, b: 0.48584908, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
